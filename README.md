@@ -55,7 +55,7 @@ Users should be able to:
 - A second issue was to colorize the image. In order to achieve this effect I used a block positionned absolutely above the image with a colored background on which I applied filters.
   ![](https://apps.stats-card-component.grimfeld.tech/assets/colorizer.png)
 - I solved the change of positionning on mobile by using a combination of flex wrap and order properties on both the content and the image in a media query
-  ![](https://apps.stats-card-component.grimfeld.tech/assets/Position-changing.png)
+  ![](https://apps.stats-card-component.grimfeld.tech/assets/position.png)
 
 ### Useful resources
 
