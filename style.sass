@@ -1,0 +1,115 @@
+$global: hsl(233, 47%, 7%)
+$blocks: hsl(244, 38%, 16%)
+$primary: hsl(277, 64%, 61%)
+$primary-transparent: hsla(277, 64%, 61%, 0.6)
+$heading: hsl(0, 0%, 100%)
+$paragraphs: hsla(0, 0%, 100%, 0.75)
+$subheading: hsla(0, 0%, 100%, 0.6)
+
+*
+  color: $paragraphs
+  font-family: 'Inter', sans-serif
+  margin: 0
+
+h1, h2
+  color: $heading
+
+html
+  font-size: 15px
+  position: relative
+
+body
+  background-color: $global
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+
+  .attribution
+    position: absolute
+    bottom: 5px
+    left: 50%
+    transform: translateX(-50%)
+    font-size: .8rem
+    text-align: center
+
+  main
+    background-color: $blocks
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: clamp(375px, 80%, 1440px)
+    border-radius: .5rem
+    .content
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: clamp(calc( 375px - 8rem ), calc( 50% - 8rem ), 40ch)
+      padding: 4rem
+      h1
+        margin-bottom: 2rem
+        font-size: 2.3rem
+        span
+          color: $primary
+      p
+        font-size: 1rem
+        line-height: 1.8rem
+      .stats
+        padding-top: 1rem
+        display: flex
+        justify-content: space-between
+        .column
+          display: flex
+          flex-direction: column
+          align-items: start
+          p
+            text-transform: uppercase
+            font-size: .8rem
+            letter-spacing: .1rem
+            color: $subheading
+            font-family: 'Lexend Deca', sans-serif
+    .image-wrapper
+      width: clamp(375px, 100%, 50%)
+      position: relative
+      .color
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: $primary-transparent
+        border-top-right-radius: .5rem
+        border-bottom-right-radius: .5rem
+        filter: saturate(150%) contrast(200%) brightness(50%)
+      img
+        border-top-right-radius: .5rem
+        border-bottom-right-radius: .5rem
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+@media all and ( max-width: 1024px )
+  body
+    padding: 6rem 0
+    main
+      justify-content: center
+      .content
+        padding: 2rem
+        order: 2
+        text-align: center
+        .stats
+          margin-top: 3rem
+          flex-direction: column
+          align-items: center
+          .column
+            align-items: center
+            margin-bottom: 1.5rem
+      .image-wrapper
+        order: 1
+        width: 100%
+        .color
+          border-top-right-radius: .5rem
+          border-top-left-radius: .5rem
+          border-bottom-right-radius: 0
+        img
+          border-top-right-radius: .5rem
+          border-top-left-radius: .5rem
+          border-bottom-right-radius: 0

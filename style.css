@@ -1,1 +1,187 @@
-/* No CSS */
+* {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+h1, h2 {
+  color: white;
+}
+
+html {
+  font-size: 15px;
+  position: relative;
+}
+
+body {
+  background-color: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body .attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: .8rem;
+  text-align: center;
+}
+
+body main {
+  background-color: #1b1938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: clamp(375px, 80%, 1440px);
+  border-radius: .5rem;
+}
+
+body main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: clamp(calc( 375px - 8rem), calc( 50% - 8rem), 40ch);
+  padding: 4rem;
+}
+
+body main .content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
+}
+
+body main .content h1 span {
+  color: #aa5cdb;
+}
+
+body main .content p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+body main .content .stats {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .content .stats .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+body main .content .stats .column p {
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body main .image-wrapper {
+  width: clamp(375px, 100%, 50%);
+  position: relative;
+}
+
+body main .image-wrapper .color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.6);
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  -webkit-filter: saturate(150%) contrast(200%) brightness(50%);
+          filter: saturate(150%) contrast(200%) brightness(50%);
+}
+
+body main .image-wrapper img {
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media all and (max-width: 1024px) {
+  body {
+    padding: 6rem 0;
+  }
+  body main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .content {
+    padding: 2rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+  }
+  body main .content .stats {
+    margin-top: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .content .stats .column {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  body main .image-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+  body main .image-wrapper .color {
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: 0;
+  }
+  body main .image-wrapper img {
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: 0;
+  }
+}
